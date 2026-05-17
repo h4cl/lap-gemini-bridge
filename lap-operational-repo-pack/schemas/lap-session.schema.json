@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LAP Session",
+  "type": "object",
+  "required": [
+    "session_id",
+    "turn",
+    "source_model",
+    "target_model",
+    "lap_packet"
+  ],
+  "properties": {
+    "session_id": {
+      "type": "string"
+    },
+    "turn": {
+      "type": "integer"
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "source_model": {
+      "type": "string"
+    },
+    "target_model": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    },
+    "action": {
+      "type": "string"
+    },
+    "lap_packet": {
+      "type": "string"
+    },
+    "response": {
+      "type": "string"
+    },
+    "analysis": {
+      "type": "object",
+      "properties": {
+        "field_state": {
+          "type": "string"
+        },
+        "resonance": {
+          "type": "string"
+        },
+        "drift": {
+          "type": "string"
+        },
+        "entropy": {
+          "type": "string"
+        },
+        "collapse_vector": {
+          "type": "string"
+        },
+        "intervention_present": {
+          "type": "boolean"
+        },
+        "risk_flag": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
