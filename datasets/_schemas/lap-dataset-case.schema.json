@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LAP Dataset Case",
+  "type": "object",
+  "required": [
+    "case_id",
+    "dataset",
+    "date",
+    "raw_state",
+    "lap_packet"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string"
+    },
+    "dataset": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    },
+    "operator": {
+      "type": "string"
+    },
+    "models": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "raw_state": {
+      "type": "string"
+    },
+    "context": {
+      "type": "string"
+    },
+    "lap_packet": {
+      "type": "string"
+    },
+    "gemini_output": {
+      "type": "string"
+    },
+    "claude_audit": {
+      "type": "string"
+    },
+    "nyx_synthesis": {
+      "type": "string"
+    },
+    "intervention": {
+      "type": "string"
+    },
+    "outcome": {
+      "type": "object",
+      "properties": {
+        "tested": {
+          "type": "boolean"
+        },
+        "field_state_before": {
+          "type": "string"
+        },
+        "field_state_after": {
+          "type": "string"
+        },
+        "utility_score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "validity": {
+      "type": "object",
+      "properties": {
+        "observed": {
+          "type": "string"
+        },
+        "inferred": {
+          "type": "string"
+        },
+        "confirmation_bias_risk": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
